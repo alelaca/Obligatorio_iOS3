@@ -17,10 +17,21 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        interestManager.addInterest(interest: Interest(image: UIImage(named: "img_prueba.jpeg")!, name: "Prueba", size: ClothesSize.M))
+        
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-        interestManager.addInterest(interest: Interest(image: UIImage(named: "img_prueba.jpeg")!, name: "Prueba", size: ClothesSize.M))
+        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+    }
+    
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection){
+        if direction == SwipeResultDirection.left{
+            print("Left")
+        }
+        else if direction == SwipeResultDirection.right{
+            print("Right")
+        }
     }
     
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
@@ -28,12 +39,12 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: interestManager.interestList[index].image)
+        //return UIImageView(image: interestManager.interestList[index].image)
+        return InterestView()
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return Bundle.main.loadNibNamed("OverlayView",
-                                                  owner: self, options: nil)?[0] as? OverlayView
+        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)?[0] as? OverlayView
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed{

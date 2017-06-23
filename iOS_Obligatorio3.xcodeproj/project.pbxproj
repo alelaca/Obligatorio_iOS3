@@ -15,6 +15,7 @@
 		959925311EFB4977006BE283 /* InterestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925301EFB4977006BE283 /* InterestManager.swift */; };
 		959925331EFB4984006BE283 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925321EFB4984006BE283 /* Interest.swift */; };
 		959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 959925351EFB522B006BE283 /* img_prueba.jpeg */; };
+		95D35D691EFCA491003152F5 /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D35D681EFCA491003152F5 /* InterestView.swift */; };
 		C9F164475DC958B892833A55 /* Pods_iOS_Obligatorio3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BEAD98F8AB6D621527AB03 /* Pods_iOS_Obligatorio3.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		959925301EFB4977006BE283 /* InterestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestManager.swift; sourceTree = "<group>"; };
 		959925321EFB4984006BE283 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		959925351EFB522B006BE283 /* img_prueba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_prueba.jpeg; sourceTree = "<group>"; };
+		95D35D681EFCA491003152F5 /* InterestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
 		B9534FEAA1D0B08C7F9EBAF8 /* Pods-iOS_Obligatorio3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Obligatorio3.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Obligatorio3/Pods-iOS_Obligatorio3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 		9599252E1EFB480F006BE283 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95D35D681EFCA491003152F5 /* InterestView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */,
 				959925311EFB4977006BE283 /* InterestManager.swift in Sources */,
 				959925331EFB4984006BE283 /* Interest.swift in Sources */,
+				95D35D691EFCA491003152F5 /* InterestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
