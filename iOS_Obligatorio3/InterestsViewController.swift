@@ -40,7 +40,7 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         //return UIImageView(image: interestManager.interestList[index].image)
-        return InterestView()
+        return InterestView.create(imageName: "img_prueba.jpeg", title: "Hola", size: "M")
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {

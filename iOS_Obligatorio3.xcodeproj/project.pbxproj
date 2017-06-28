@@ -15,6 +15,8 @@
 		959925311EFB4977006BE283 /* InterestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925301EFB4977006BE283 /* InterestManager.swift */; };
 		959925331EFB4984006BE283 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925321EFB4984006BE283 /* Interest.swift */; };
 		959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 959925351EFB522B006BE283 /* img_prueba.jpeg */; };
+		95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCC2491F032FF500A38D8F /* ImageManager.swift */; };
+		95CCC24C1F033A9A00A38D8F /* InterestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CCC24B1F033A9A00A38D8F /* InterestView.xib */; };
 		95D35D691EFCA491003152F5 /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D35D681EFCA491003152F5 /* InterestView.swift */; };
 		C9F164475DC958B892833A55 /* Pods_iOS_Obligatorio3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BEAD98F8AB6D621527AB03 /* Pods_iOS_Obligatorio3.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		959925301EFB4977006BE283 /* InterestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestManager.swift; sourceTree = "<group>"; };
 		959925321EFB4984006BE283 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		959925351EFB522B006BE283 /* img_prueba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_prueba.jpeg; sourceTree = "<group>"; };
+		95CCC2491F032FF500A38D8F /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		95CCC24B1F033A9A00A38D8F /* InterestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestView.xib; sourceTree = "<group>"; };
 		95D35D681EFCA491003152F5 /* InterestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
 		B9534FEAA1D0B08C7F9EBAF8 /* Pods-iOS_Obligatorio3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Obligatorio3.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Obligatorio3/Pods-iOS_Obligatorio3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,7 @@
 		959925181EFB3F21006BE283 /* iOS_Obligatorio3 */ = {
 			isa = PBXGroup;
 			children = (
+				95CCC2481F032FD700A38D8F /* Utils */,
 				959925341EFB51D5006BE283 /* Images */,
 				9599252F1EFB4817006BE283 /* Controller */,
 				9599252E1EFB480F006BE283 /* View */,
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				95D35D681EFCA491003152F5 /* InterestView.swift */,
+				95CCC24B1F033A9A00A38D8F /* InterestView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -121,6 +127,14 @@
 				959925351EFB522B006BE283 /* img_prueba.jpeg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		95CCC2481F032FD700A38D8F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				95CCC2491F032FF500A38D8F /* ImageManager.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		E626AD38F91B15BDBE4B0A04 /* Pods */ = {
@@ -194,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CCC24C1F033A9A00A38D8F /* InterestView.xib in Resources */,
 				959925241EFB3F21006BE283 /* LaunchScreen.storyboard in Resources */,
 				959925211EFB3F21006BE283 /* Assets.xcassets in Resources */,
 				959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */,
@@ -259,6 +274,7 @@
 				9599252C1EFB4610006BE283 /* InterestsViewController.swift in Sources */,
 				9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */,
 				959925311EFB4977006BE283 /* InterestManager.swift in Sources */,
+				95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */,
 				959925331EFB4984006BE283 /* Interest.swift in Sources */,
 				95D35D691EFCA491003152F5 /* InterestView.swift in Sources */,
 			);

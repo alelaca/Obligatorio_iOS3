@@ -8,18 +8,18 @@
 import Koloda
 import UIKit
 
-class InterestView: KolodaView {
+class InterestView: UIView {
 
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    init(imageView: UIImageView, titleLabel: UILabel){
-        super(init)
-        imageView.image = UIImage(named: "img_prueba.jpeg")
-        titleLabel.text = "Prueba"
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    static func create(imageName: String, title: String, size: String) -> InterestView {
+        if let view = Bundle.main.loadNibNamed("InterestView", owner: nil, options: nil)?.first as? InterestView {
+            view.imageView.image = UIImage(named: "img_prueba.jpeg")
+            view.titleLabel.text = title
+            return view
+        }
+        
+        fatalError("Couldn`t load the image")
     }
 }
