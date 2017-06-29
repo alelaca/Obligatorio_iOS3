@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_Obligatorio3/InterestView.swift"
-            timestampString = "520306064.686445"
+            timestampString = "520389111.762374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "create(imageName:title:size:)"
             landmarkType = "7">
          </BreakpointContent>

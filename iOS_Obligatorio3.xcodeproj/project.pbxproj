@@ -15,6 +15,10 @@
 		959925311EFB4977006BE283 /* InterestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925301EFB4977006BE283 /* InterestManager.swift */; };
 		959925331EFB4984006BE283 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925321EFB4984006BE283 /* Interest.swift */; };
 		959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 959925351EFB522B006BE283 /* img_prueba.jpeg */; };
+		95A003211F0483C50018C7B6 /* ClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003201F0483C50018C7B6 /* ClothesTableViewCell.swift */; };
+		95A003231F0485C20018C7B6 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003221F0485C20018C7B6 /* Clothes.swift */; };
+		95A003251F0487980018C7B6 /* ClothesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003241F0487980018C7B6 /* ClothesTableViewController.swift */; };
+		95A003271F048B930018C7B6 /* ClothesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003261F048B930018C7B6 /* ClothesManager.swift */; };
 		95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCC2491F032FF500A38D8F /* ImageManager.swift */; };
 		95CCC24C1F033A9A00A38D8F /* InterestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CCC24B1F033A9A00A38D8F /* InterestView.xib */; };
 		95D35D691EFCA491003152F5 /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D35D681EFCA491003152F5 /* InterestView.swift */; };
@@ -34,6 +38,10 @@
 		959925301EFB4977006BE283 /* InterestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestManager.swift; sourceTree = "<group>"; };
 		959925321EFB4984006BE283 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		959925351EFB522B006BE283 /* img_prueba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_prueba.jpeg; sourceTree = "<group>"; };
+		95A003201F0483C50018C7B6 /* ClothesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesTableViewCell.swift; sourceTree = "<group>"; };
+		95A003221F0485C20018C7B6 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
+		95A003241F0487980018C7B6 /* ClothesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesTableViewController.swift; sourceTree = "<group>"; };
+		95A003261F048B930018C7B6 /* ClothesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesManager.swift; sourceTree = "<group>"; };
 		95CCC2491F032FF500A38D8F /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		95CCC24B1F033A9A00A38D8F /* InterestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestView.xib; sourceTree = "<group>"; };
 		95D35D681EFCA491003152F5 /* InterestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
@@ -100,6 +108,8 @@
 			children = (
 				959925301EFB4977006BE283 /* InterestManager.swift */,
 				959925321EFB4984006BE283 /* Interest.swift */,
+				95A003221F0485C20018C7B6 /* Clothes.swift */,
+				95A003261F048B930018C7B6 /* ClothesManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -109,6 +119,7 @@
 			children = (
 				95D35D681EFCA491003152F5 /* InterestView.swift */,
 				95CCC24B1F033A9A00A38D8F /* InterestView.xib */,
+				95A003201F0483C50018C7B6 /* ClothesTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -117,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				9599252B1EFB4610006BE283 /* InterestsViewController.swift */,
+				95A003241F0487980018C7B6 /* ClothesTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -273,9 +285,13 @@
 			files = (
 				9599252C1EFB4610006BE283 /* InterestsViewController.swift in Sources */,
 				9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */,
+				95A003231F0485C20018C7B6 /* Clothes.swift in Sources */,
 				959925311EFB4977006BE283 /* InterestManager.swift in Sources */,
 				95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */,
+				95A003211F0483C50018C7B6 /* ClothesTableViewCell.swift in Sources */,
+				95A003251F0487980018C7B6 /* ClothesTableViewController.swift in Sources */,
 				959925331EFB4984006BE283 /* Interest.swift in Sources */,
+				95A003271F048B930018C7B6 /* ClothesManager.swift in Sources */,
 				95D35D691EFCA491003152F5 /* InterestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

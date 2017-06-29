@@ -12,11 +12,13 @@ class InterestView: UIView {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
     
     static func create(imageName: String, title: String, size: String) -> InterestView {
         if let view = Bundle.main.loadNibNamed("InterestView", owner: nil, options: nil)?.first as? InterestView {
-            view.imageView.image = UIImage(named: "img_prueba.jpeg")
+            view.imageView.image = UIImage(named: imageName)
             view.titleLabel.text = title
+            view.sizeLabel.text = size
             return view
         }
         
