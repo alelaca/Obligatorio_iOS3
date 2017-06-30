@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		955473651F05D2300060918B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955473641F05D2300060918B /* GoogleService-Info.plist */; };
 		9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925191EFB3F21006BE283 /* AppDelegate.swift */; };
 		9599251F1EFB3F21006BE283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9599251D1EFB3F21006BE283 /* Main.storyboard */; };
 		959925211EFB3F21006BE283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959925201EFB3F21006BE283 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		636BBFC85BB06911F2B4071D /* Pods-iOS_Obligatorio3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Obligatorio3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Obligatorio3/Pods-iOS_Obligatorio3.debug.xcconfig"; sourceTree = "<group>"; };
 		79BEAD98F8AB6D621527AB03 /* Pods_iOS_Obligatorio3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Obligatorio3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		955473641F05D2300060918B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		959925161EFB3F21006BE283 /* iOS_Obligatorio3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Obligatorio3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959925191EFB3F21006BE283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9599251E1EFB3F21006BE283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		959925181EFB3F21006BE283 /* iOS_Obligatorio3 */ = {
 			isa = PBXGroup;
 			children = (
+				955473641F05D2300060918B /* GoogleService-Info.plist */,
 				95CCC2481F032FD700A38D8F /* Utils */,
 				959925341EFB51D5006BE283 /* Images */,
 				9599252F1EFB4817006BE283 /* Controller */,
@@ -225,6 +228,7 @@
 				959925211EFB3F21006BE283 /* Assets.xcassets in Resources */,
 				959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */,
 				9599251F1EFB3F21006BE283 /* Main.storyboard in Resources */,
+				955473651F05D2300060918B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

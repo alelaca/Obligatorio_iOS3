@@ -7,8 +7,21 @@
 //
 
 import Foundation
+import Firebase
 
 class ClothesManager {
     var clothesList: [Clothes] = []
     
+    func loadInitialData(ref: FIRDatabaseReference){
+        ref.child("clothes").observeSingleEvent(of: .value, with: { (snapshot) in
+            let enumerator = snapshot.children
+            while let item = enumerator.nextObject() as? FIRDataSnapshot {
+                // rest.value
+            }
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
 }

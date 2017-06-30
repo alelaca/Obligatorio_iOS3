@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class ClothesTableViewController: UITableViewController {
     
     var clothesManager: ClothesManager!
+    var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ref = FIRDatabase.database().reference()
         clothesManager = ClothesManager() // todo: hacerlo singleton
+        
+        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
