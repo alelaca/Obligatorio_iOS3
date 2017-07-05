@@ -13,15 +13,18 @@ class ClothesManager {
     var clothesList: [Clothes] = []
     
     func loadInitialData(ref: FIRDatabaseReference){
-        ref.child("clothes").observeSingleEvent(of: .value, with: { (snapshot) in
-            let enumerator = snapshot.children
-            while let item = enumerator.nextObject() as? FIRDataSnapshot {
-                // rest.value
+        ref.child("clothes").observe(.childAdded, with: { snapshot in
+            if let snapshotValue = snapshot.value as? [String:Any]{
+                //let id = snapshot.key as! Int
+                let title = snapshotValue["title"] as! String
+                let image = snapshotValue["image"] as! String
+                let size = snapshotValue["size"] as! String
+                
+                self.clothesList.append(Clothes(id: 0, title: title, description: "", size: size, image: image))
             }
-            
-            // ...
-        }) { (error) in
-            print(error.localizedDescription)
         }
+            , withCancel: { error in
+                // imprimir un error en pantalla
+        })
     }
 }

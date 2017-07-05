@@ -30,7 +30,7 @@
         <!--Item-->
         <scene sceneID="ikF-XB-l9c">
             <objects>
-                <viewController id="kNF-nV-QKu" sceneMemberID="viewController">
+                <viewController id="kNF-nV-QKu" customClass="ClothesTableViewController" customModule="iOS_Obligatorio3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="elO-hs-8T7"/>
                         <viewControllerLayoutGuide type="bottom" id="v7Q-TE-jvN"/>
@@ -51,7 +51,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dxn-n7-FUy" id="TtR-66-iZl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cdi-re-Ypt">
@@ -96,6 +96,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kNF-nV-QKu" id="DwQ-6P-345"/>
+                                    <outlet property="delegate" destination="kNF-nV-QKu" id="MV8-Og-kxt"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

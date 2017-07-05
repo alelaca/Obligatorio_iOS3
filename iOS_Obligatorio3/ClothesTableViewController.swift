@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ClothesTableViewController: UITableViewController {
+class ClothesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var clothesManager: ClothesManager!
     var ref: FIRDatabaseReference!
@@ -20,26 +20,26 @@ class ClothesTableViewController: UITableViewController {
         ref = FIRDatabase.database().reference()
         clothesManager = ClothesManager() // todo: hacerlo singleton
         
-        
+        clothesManager.loadInitialData(ref: ref)
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothesCell", for: indexPath) as! ClothesTableViewCell
-        
+        /*
         let clothes: Clothes = self.clothesManager.clothesList[indexPath.row]
         cell.clothesImageView.image = UIImage(named: clothes.image)
         cell.titleLabel.text = clothes.title
         cell.sizeLabel.text = clothes.size
-        
+        */
         return cell
     }
 

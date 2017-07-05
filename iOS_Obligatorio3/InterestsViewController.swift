@@ -8,21 +8,31 @@
 
 import UIKit
 import Koloda
+import Firebase
 
 class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
     
     @IBOutlet weak var kolodaView: KolodaView!
-    var interestManager: InterestManager = InterestManager()
+    
+    var clothesManager: ClothesManager = ClothesManager()
+    var ref: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interestManager.addInterest(interest: Interest(image: UIImage(named: "img_prueba.jpeg")!, name: "Prueba", size: ClothesSize.M))
+        //interestManager.addInterest(interest: Interest(image: UIImage(named: "img_prueba.jpeg")!, name: "Prueba", size: ClothesSize.M))
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+    
+        // load data from firebase
+        ref = FIRDatabase.database().reference()
+        clothesManager = ClothesManager() // todo: hacerlo singleton
+        clothesManager.loadInitialData(ref: ref) // wait for response
+        
+        kolodaView.reloadData()
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection){
@@ -35,12 +45,12 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     }
     
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return interestManager.interestList.count
+        return clothesManager.clothesList.count
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        //return UIImageView(image: interestManager.interestList[index].image)
-        return InterestView.create(imageName: "img_prueba.jpeg", title: "Hola", size: "L")
+        let clothes: Clothes = clothesManager.clothesList[index]
+        return InterestView.create(imageName: clothes.image, title: clothes.title, size: clothes.size)
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
