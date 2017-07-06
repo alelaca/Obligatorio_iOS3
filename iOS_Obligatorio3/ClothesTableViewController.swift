@@ -11,16 +11,13 @@ import Firebase
 
 class ClothesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var clothesManager: ClothesManager!
+    @IBOutlet weak var clothesTableView: UITableView!
+    
+    var clothesManager: ClothesManager = ClothesManager.instance
     var ref: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ref = FIRDatabase.database().reference()
-        clothesManager = ClothesManager() // todo: hacerlo singleton
-        
-        clothesManager.loadInitialData(ref: ref)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,17 +26,17 @@ class ClothesTableViewController: UIViewController, UITableViewDelegate, UITable
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return clothesManager.clothesList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothesCell", for: indexPath) as! ClothesTableViewCell
-        /*
-        let clothes: Clothes = self.clothesManager.clothesList[indexPath.row]
-        cell.clothesImageView.image = UIImage(named: clothes.image)
-        cell.titleLabel.text = clothes.title
-        cell.sizeLabel.text = clothes.size
-        */
+        
+            let clothes: Clothes = self.clothesManager.clothesList[indexPath.row]
+            cell.clothesImageView.image = UIImage(named: clothes.image)
+            cell.titleLabel.text = clothes.title
+            cell.sizeLabel.text = clothes.size
+        
         return cell
     }
 

@@ -13,8 +13,6 @@
 		959925211EFB3F21006BE283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959925201EFB3F21006BE283 /* Assets.xcassets */; };
 		959925241EFB3F21006BE283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959925221EFB3F21006BE283 /* LaunchScreen.storyboard */; };
 		9599252C1EFB4610006BE283 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599252B1EFB4610006BE283 /* InterestsViewController.swift */; };
-		959925311EFB4977006BE283 /* InterestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925301EFB4977006BE283 /* InterestManager.swift */; };
-		959925331EFB4984006BE283 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925321EFB4984006BE283 /* Interest.swift */; };
 		959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 959925351EFB522B006BE283 /* img_prueba.jpeg */; };
 		95A003211F0483C50018C7B6 /* ClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003201F0483C50018C7B6 /* ClothesTableViewCell.swift */; };
 		95A003231F0485C20018C7B6 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003221F0485C20018C7B6 /* Clothes.swift */; };
@@ -40,8 +38,6 @@
 		959925231EFB3F21006BE283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959925251EFB3F21006BE283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9599252B1EFB4610006BE283 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
-		959925301EFB4977006BE283 /* InterestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestManager.swift; sourceTree = "<group>"; };
-		959925321EFB4984006BE283 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		959925351EFB522B006BE283 /* img_prueba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_prueba.jpeg; sourceTree = "<group>"; };
 		95A003201F0483C50018C7B6 /* ClothesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesTableViewCell.swift; sourceTree = "<group>"; };
 		95A003221F0485C20018C7B6 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
@@ -115,8 +111,6 @@
 		9599252D1EFB4806006BE283 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				959925301EFB4977006BE283 /* InterestManager.swift */,
-				959925321EFB4984006BE283 /* Interest.swift */,
 				95A003221F0485C20018C7B6 /* Clothes.swift */,
 				95A003261F048B930018C7B6 /* ClothesManager.swift */,
 			);
@@ -302,11 +296,9 @@
 				9599252C1EFB4610006BE283 /* InterestsViewController.swift in Sources */,
 				9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */,
 				95A003231F0485C20018C7B6 /* Clothes.swift in Sources */,
-				959925311EFB4977006BE283 /* InterestManager.swift in Sources */,
 				95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */,
 				95A003211F0483C50018C7B6 /* ClothesTableViewCell.swift in Sources */,
 				95A003251F0487980018C7B6 /* ClothesTableViewController.swift in Sources */,
-				959925331EFB4984006BE283 /* Interest.swift in Sources */,
 				95A003271F048B930018C7B6 /* ClothesManager.swift in Sources */,
 				95D35D691EFCA491003152F5 /* InterestView.swift in Sources */,
 			);

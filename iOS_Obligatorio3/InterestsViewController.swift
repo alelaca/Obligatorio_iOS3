@@ -14,7 +14,7 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     
     @IBOutlet weak var kolodaView: KolodaView!
     
-    var clothesManager: ClothesManager = ClothesManager()
+    var clothesManager: ClothesManager = ClothesManager.instance
     var ref: FIRDatabaseReference!
 
     override func viewDidLoad() {
@@ -29,10 +29,9 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     
         // load data from firebase
         ref = FIRDatabase.database().reference()
-        clothesManager = ClothesManager() // todo: hacerlo singleton
-        clothesManager.loadInitialData(ref: ref) // wait for response
-        
-        kolodaView.reloadData()
+        clothesManager.loadInitialData(ref) {_ in
+            self.kolodaView.reloadData()
+        }
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection){

@@ -10,21 +10,33 @@ import Foundation
 import Firebase
 
 class ClothesManager {
+    
     var clothesList: [Clothes] = []
     
-    func loadInitialData(ref: FIRDatabaseReference){
+    static let instance: ClothesManager = ClothesManager()
+    
+    private init(){
+        self.retrieveData()
+    }
+    
+    func loadInitialData(_ ref: FIRDatabaseReference, oncompletion: @escaping (_ error: Error?)->()) {
         ref.child("clothes").observe(.childAdded, with: { snapshot in
-            if let snapshotValue = snapshot.value as? [String:Any]{
-                //let id = snapshot.key as! Int
+            if let snapshotValue = snapshot.value as? NSDictionary {
+                //let id = snapshot.value as! Int
                 let title = snapshotValue["title"] as! String
                 let image = snapshotValue["image"] as! String
                 let size = snapshotValue["size"] as! String
                 
                 self.clothesList.append(Clothes(id: 0, title: title, description: "", size: size, image: image))
+                oncompletion(nil)
             }
         }
             , withCancel: { error in
-                // imprimir un error en pantalla
+                oncompletion(error)
         })
+    }
+    
+    func retrieveData(){
+        
     }
 }
