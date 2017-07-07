@@ -24,6 +24,8 @@
 		95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCC2491F032FF500A38D8F /* ImageManager.swift */; };
 		95CCC24C1F033A9A00A38D8F /* InterestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CCC24B1F033A9A00A38D8F /* InterestView.xib */; };
 		95D35D691EFCA491003152F5 /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D35D681EFCA491003152F5 /* InterestView.swift */; };
+		95FBF1221F0F09B400267E91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBF1211F0F09B400267E91 /* LoginViewController.swift */; };
+		95FBF1241F0F136500267E91 /* PublishClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBF1231F0F136500267E91 /* PublishClothesViewController.swift */; };
 		C9F164475DC958B892833A55 /* Pods_iOS_Obligatorio3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BEAD98F8AB6D621527AB03 /* Pods_iOS_Obligatorio3.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		95CCC2491F032FF500A38D8F /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		95CCC24B1F033A9A00A38D8F /* InterestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestView.xib; sourceTree = "<group>"; };
 		95D35D681EFCA491003152F5 /* InterestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
+		95FBF1211F0F09B400267E91 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		95FBF1231F0F136500267E91 /* PublishClothesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishClothesViewController.swift; sourceTree = "<group>"; };
 		B9534FEAA1D0B08C7F9EBAF8 /* Pods-iOS_Obligatorio3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Obligatorio3.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Obligatorio3/Pods-iOS_Obligatorio3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,8 @@
 			children = (
 				9599252B1EFB4610006BE283 /* InterestsViewController.swift */,
 				95A003241F0487980018C7B6 /* ClothesTableViewController.swift */,
+				95FBF1211F0F09B400267E91 /* LoginViewController.swift */,
+				95FBF1231F0F136500267E91 /* PublishClothesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -293,8 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FBF1221F0F09B400267E91 /* LoginViewController.swift in Sources */,
 				9599252C1EFB4610006BE283 /* InterestsViewController.swift in Sources */,
 				9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */,
+				95FBF1241F0F136500267E91 /* PublishClothesViewController.swift in Sources */,
 				95A003231F0485C20018C7B6 /* Clothes.swift in Sources */,
 				95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */,
 				95A003211F0483C50018C7B6 /* ClothesTableViewCell.swift in Sources */,
