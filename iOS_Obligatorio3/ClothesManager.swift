@@ -13,15 +13,16 @@ import FirebaseStorage
 class ClothesManager {
     
     var clothesList: [Clothes] = []
-    
+	
     static let instance: ClothesManager = ClothesManager()
     
     private init(){
         self.retrieveData()
     }
     
-    func loadInitialData(_ ref: FIRDatabaseReference, oncompletion: @escaping (_ error: Error?)->()) {
-        ref.child("clothes").observe(.childAdded, with: { snapshot in
+    func loadInitialData(oncompletion: @escaping (_ error: Error?)->()) {
+		let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference()
+        databaseRef.child("clothes").observe(.childAdded, with: { snapshot in
             if let snapshotValue = snapshot.value as? NSDictionary {
                 //let id = snapshot.value as! Int
                 let title = snapshotValue["title"] as! String
@@ -36,9 +37,14 @@ class ClothesManager {
                 oncompletion(error)
         })
     }
-	/*
-	func loadImageFromDB(_ imgUrl: String){
-		let refSt = FIRStorage.storage().reference(forURL: imgUrl)
+	
+	func saveClothes(clothes: Clothes) {
+		let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference()
+		databaseRef.child("users").child(UserManager.instance.userID).childByAutoId().setValue(clothes)
+	}
+	
+	/*func loadImageFromFirebase(_ imgUrl: String){
+		let refSt = storageRef.
 		refSt.data(withMaxSize: INT64_MAX){ (data, error) in
 			refSt.metadata(completion: { (metadata, error) in
 				

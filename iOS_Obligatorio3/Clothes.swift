@@ -23,6 +23,10 @@ class Clothes {
         self.size = size
         self.image = image
     }
+	
+	init(){
+		
+	}
     
     func addTag(tag: String){
         tags.append(tag)

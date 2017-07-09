@@ -15,33 +15,42 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
     @IBOutlet weak var sizeSegmentedControl: UISegmentedControl!
 	@IBOutlet weak var imageView: UIImageView!
 	
+	var clothesTemp: Clothes = Clothes()
+	
 	var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		// imageView gesture recognizer
-		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+		/*let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
 		imageView.isUserInteractionEnabled = true
-		imageView.addGestureRecognizer(tapGestureRecognizer)
+		imageView.addGestureRecognizer(tapGestureRecognizer)*/
     }
     
     @IBAction func publishButtonAction(_ sender: Any) {
         if verifyClothesData() != "" {
-            
+			clothesTemp.id = 0
+            clothesTemp.title = titleTextField.text
+			clothesTemp.description = descriptionTextField.text
+			clothesTemp.size = sizeSegmentedControl.titleForSegment(at: sizeSegmentedControl.selectedSegmentIndex)
+			ClothesManager.instance.saveClothes(clothes: clothesTemp)
         }
     }
     
     func verifyClothesData() -> String {
-        if (titleTextField.text == ""){
+        if (titleTextField.text == "") {
             return "A title for the clothes is needed"
         }
-        if (!sizeSegmentedControl.isSelected){
+        if (!sizeSegmentedControl.isSelected) {
             return "You need to select the size"
         }
-        if (descriptionTextField.text == ""){
+        if (descriptionTextField.text == "") {
             return "A description for the clothes is needed"
         }
+		if (clothesTemp.image == nil) {
+			return "Image missing. Please select one"
+		}
         return ""
     }
     
@@ -67,7 +76,6 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
     }
 	func imageTapped(){
 		if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-			print("Button capture")
 	
 			imagePicker.delegate = self
 			imagePicker.sourceType = .savedPhotosAlbum;
@@ -81,6 +89,10 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
 		self.dismiss(animated: true, completion: { () -> Void in
 		
 		})
+		
+		if let imageURL = info[UIImagePickerControllerReferenceURL] as? NSURL {
+			clothesTemp.image = imageURL.absoluteString
+		}
 		
 		if let possibleImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
 			imageView.image = possibleImage

@@ -15,7 +15,6 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     @IBOutlet weak var kolodaView: KolodaView!
     
     var clothesManager: ClothesManager = ClothesManager.instance
-    var ref: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +27,7 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
     
         // load data from firebase
-        ref = FIRDatabase.database().reference()
-        clothesManager.loadInitialData(ref) {_ in
+        clothesManager.loadInitialData() {_ in
             self.kolodaView.reloadData()
         }
     }
