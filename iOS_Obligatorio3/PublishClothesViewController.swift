@@ -8,15 +8,22 @@
 
 import UIKit
 
-class PublishClothesViewController: UIViewController {
+class PublishClothesViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var sizeSegmentedControl: UISegmentedControl!
+	@IBOutlet weak var imageView: UIImageView!
+	
+	var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		
+		// imageView gesture recognizer
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+		imageView.isUserInteractionEnabled = true
+		imageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     @IBAction func publishButtonAction(_ sender: Any) {
@@ -58,5 +65,27 @@ class PublishClothesViewController: UIViewController {
         }
         return ""
     }
+	func imageTapped(){
+		if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+			print("Button capture")
+	
+			imagePicker.delegate = self
+			imagePicker.sourceType = .savedPhotosAlbum;
+			imagePicker.allowsEditing = false
+	
+			self.present(imagePicker, animated: true, completion: nil)
+		}
+	}
 
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
+		self.dismiss(animated: true, completion: { () -> Void in
+		
+		})
+		
+		if let possibleImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+			imageView.image = possibleImage
+		} else if let possibleImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+			imageView.image = possibleImage
+		}
+	}
 }

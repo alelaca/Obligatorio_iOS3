@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
                     // mostrar un mensaje de error
                 }
                 else if let user = user {
+					UserManager.instance.userID = FIRAuth.auth()?.currentUser?.uid
                     self.performSegue(withIdentifier: "loginAction", sender: nil)
                 }
             }

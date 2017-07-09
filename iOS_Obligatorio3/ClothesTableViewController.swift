@@ -36,7 +36,17 @@ class ClothesTableViewController: UIViewController, UITableViewDelegate, UITable
             cell.clothesImageView.image = UIImage(named: clothes.image)
             cell.titleLabel.text = clothes.title
             cell.sizeLabel.text = clothes.size
-        
+		
+			// set background color for cardview
+			cell.backgroundCardView.backgroundColor = UIColor.white
+			cell.contentView.backgroundColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1.0)
+		
+			cell.backgroundCardView.layer.cornerRadius = 3.0
+			cell.backgroundCardView.layer.masksToBounds = false
+		
+			cell.backgroundCardView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+			cell.backgroundCardView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+			cell.backgroundCardView.layer.shadowOpacity = 0.8
         return cell
     }
 

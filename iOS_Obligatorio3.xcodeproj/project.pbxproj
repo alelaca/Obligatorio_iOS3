@@ -27,6 +27,7 @@
 		95FBF1221F0F09B400267E91 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBF1211F0F09B400267E91 /* LoginViewController.swift */; };
 		95FBF1241F0F136500267E91 /* PublishClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBF1231F0F136500267E91 /* PublishClothesViewController.swift */; };
 		C9F164475DC958B892833A55 /* Pods_iOS_Obligatorio3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BEAD98F8AB6D621527AB03 /* Pods_iOS_Obligatorio3.framework */; };
+		CEA616C11F116F6700EF7382 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA616C01F116F6700EF7382 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		95FBF1211F0F09B400267E91 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		95FBF1231F0F136500267E91 /* PublishClothesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishClothesViewController.swift; sourceTree = "<group>"; };
 		B9534FEAA1D0B08C7F9EBAF8 /* Pods-iOS_Obligatorio3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Obligatorio3.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Obligatorio3/Pods-iOS_Obligatorio3.release.xcconfig"; sourceTree = "<group>"; };
+		CEA616C01F116F6700EF7382 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				95A003221F0485C20018C7B6 /* Clothes.swift */,
 				95A003261F048B930018C7B6 /* ClothesManager.swift */,
+				CEA616C01F116F6700EF7382 /* UserManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -289,7 +292,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -308,6 +311,7 @@
 				95A003211F0483C50018C7B6 /* ClothesTableViewCell.swift in Sources */,
 				95A003251F0487980018C7B6 /* ClothesTableViewController.swift in Sources */,
 				95A003271F048B930018C7B6 /* ClothesManager.swift in Sources */,
+				CEA616C11F116F6700EF7382 /* UserManager.swift in Sources */,
 				95D35D691EFCA491003152F5 /* InterestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

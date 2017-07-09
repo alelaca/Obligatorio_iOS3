@@ -14,7 +14,9 @@ class ClothesTableViewCell: UITableViewCell {
     @IBOutlet weak var clothesImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var sizeLabel: UILabel!
-    
+	@IBOutlet weak var backgroundCardView: UIView!
+	
+	
     override func awakeFromNib() {
         super.awakeFromNib()
     }

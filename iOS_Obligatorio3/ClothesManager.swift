@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
 
 class ClothesManager {
     
@@ -35,6 +36,15 @@ class ClothesManager {
                 oncompletion(error)
         })
     }
+	/*
+	func loadImageFromDB(_ imgUrl: String){
+		let refSt = FIRStorage.storage().reference(forURL: imgUrl)
+		refSt.data(withMaxSize: INT64_MAX){ (data, error) in
+			refSt.metadata(completion: { (metadata, error) in
+				
+			})
+		})
+	}*/
     
     func retrieveData(){
         
