@@ -38,10 +38,36 @@ class ClothesManager {
         })
     }
 	
-	func saveClothes(clothes: Clothes) {
-		let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference()
-		databaseRef.child("users").child(UserManager.instance.userID).childByAutoId().setValue(clothes)
-	}
+    func saveClothes(clothes: Clothes) {
+        let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference()
+        databaseRef.child("users").child(UserManager.instance.userID).childByAutoId().setValue(clothes.dataToFirebase())
+        saveImageToFirebase(image: clothes.imageFile)
+    }
+    
+    func saveImageToFirebase(image: UIImage) {
+        var data = NSData()
+        data = UIImageJPEGRepresentation(image, 0.8)! as NSData
+        
+        //let filePath = "clothes\(FIRAuth.auth()!.currentUser!.uid)/\("userPhoto")"
+        let metaData = FIRStorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        let storageRef = FIRStorage.storage().reference()
+        let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference()
+        storageRef.child("clothes").child(FIRAuth.auth()!.currentUser!.uid).put(data as Data, metadata: metaData){(metaData,error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }else{
+                //store downloadURL
+                let downloadURL = metaData!.downloadURL()!.absoluteString
+                //store downloadURL at database
+                databaseRef.child("users").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues(["userPhoto": downloadURL])
+            }
+            
+        }
+    }
+
 	
 	/*func loadImageFromFirebase(_ imgUrl: String){
 		let refSt = storageRef.

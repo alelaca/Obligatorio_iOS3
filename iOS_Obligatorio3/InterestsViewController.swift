@@ -47,7 +47,7 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let clothes: Clothes = clothesManager.clothesList[index]
-        return InterestView.create(imageName: clothes.image, title: clothes.title, size: clothes.size)
+        return InterestView.create(imageName: clothes.imageURL, title: clothes.title, size: clothes.size)
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {

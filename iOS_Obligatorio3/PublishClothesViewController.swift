@@ -23,9 +23,9 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
         super.viewDidLoad()
 		
 		// imageView gesture recognizer
-		/*let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
 		imageView.isUserInteractionEnabled = true
-		imageView.addGestureRecognizer(tapGestureRecognizer)*/
+		imageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     @IBAction func publishButtonAction(_ sender: Any) {
@@ -48,7 +48,7 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
         if (descriptionTextField.text == "") {
             return "A description for the clothes is needed"
         }
-		if (clothesTemp.image == nil) {
+		if (clothesTemp.imageURL == nil) {
 			return "Image missing. Please select one"
 		}
         return ""
@@ -91,13 +91,15 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
 		})
 		
 		if let imageURL = info[UIImagePickerControllerReferenceURL] as? NSURL {
-			clothesTemp.image = imageURL.absoluteString
+			clothesTemp.imageURL = imageURL.absoluteString
 		}
 		
 		if let possibleImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
-			imageView.image = possibleImage
+            imageView.image = possibleImage
+            clothesTemp.imageFile = possibleImage
 		} else if let possibleImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-			imageView.image = possibleImage
+            imageView.image = possibleImage
+            clothesTemp.imageFile = possibleImage
 		}
 	}
 }

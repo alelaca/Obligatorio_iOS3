@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6bW-q7-dkr">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="l3y-SQ-peB">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -303,6 +303,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cq-dJ-lRm">
                                                 <rect key="frame" x="134.5" y="456" width="51" height="30"/>
                                                 <state key="normal" title="Publish"/>
+                                                <connections>
+                                                    <action selector="publishButtonAction:" destination="eoF-Io-eRd" eventType="touchUpInside" id="mYn-JH-YQu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -345,6 +348,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Yga-TS-pfV"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="Bda-Fu-NGV" id="NbI-mq-3su"/>
+                        <outlet property="imageView" destination="vuQ-kC-j9l" id="KT1-XT-Clb"/>
+                        <outlet property="sizeSegmentedControl" destination="T3i-Bg-gzu" id="S2n-Wf-o52"/>
+                        <outlet property="titleTextField" destination="17b-xU-Rk0" id="Vaf-ft-ZxI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTp-vZ-6oX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -33,7 +33,7 @@ class ClothesTableViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClothesCell", for: indexPath) as! ClothesTableViewCell
         
             let clothes: Clothes = self.clothesManager.clothesList[indexPath.row]
-            cell.clothesImageView.image = UIImage(named: clothes.image)
+            cell.clothesImageView.image = UIImage(named: clothes.imageURL)
             cell.titleLabel.text = clothes.title
             cell.sizeLabel.text = clothes.size
 		

@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class Clothes {
     var id: Int!
     var title: String!
     var description: String!
     var size: String!
-    var image: String!
+    var imageURL: String!
+    var imageFile: UIImage!
     var tags: [String] = []
     
     init(id: Int, title: String, description: String, size: String, image: String){
@@ -21,12 +23,12 @@ class Clothes {
         self.title = title
         self.description = description
         self.size = size
-        self.image = image
+        self.imageURL = image
     }
-	
-	init(){
-		
-	}
+    
+    init(){
+        
+    }
     
     func addTag(tag: String){
         tags.append(tag)
@@ -34,5 +36,13 @@ class Clothes {
     
     func removeTag(tag: String) {
         tags = [tags.remove(at: tags.index(of: tag)!)]
+    }
+    
+    func dataToFirebase() -> Any {
+        return [
+            "title": self.title,
+            "size": self.size,
+            "description": self.description
+        ]
     }
 }
