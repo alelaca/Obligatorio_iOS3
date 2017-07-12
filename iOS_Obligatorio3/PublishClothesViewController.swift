@@ -30,7 +30,7 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
     
     @IBAction func publishButtonAction(_ sender: Any) {
         if verifyClothesData() != "" {
-			clothesTemp.id = 0
+			clothesTemp.id = "0"
             clothesTemp.title = titleTextField.text
 			clothesTemp.description = descriptionTextField.text
 			clothesTemp.size = sizeSegmentedControl.titleForSegment(at: sizeSegmentedControl.selectedSegmentIndex)

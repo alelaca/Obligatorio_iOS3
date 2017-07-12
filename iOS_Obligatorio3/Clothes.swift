@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class Clothes {
-    var id: Int!
+    var id: String!
     var title: String!
     var description: String!
     var size: String!
@@ -18,7 +18,7 @@ class Clothes {
     var imageFile: UIImage!
     var tags: [String] = []
     
-    init(id: Int, title: String, description: String, size: String, image: String){
+    init(id: String, title: String, description: String, size: String, image: String){
         self.id = id
         self.title = title
         self.description = description
