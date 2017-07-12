@@ -33,12 +33,13 @@ class ClothesManager {
                         let size = clothes["size"] as! String
                         
                         let clothes = Clothes(id: id, title: title, description: description, size: size, image: imageURL)
-                        self.clothesList.append(clothes)
-                        self.loadImageFromFirebase(uid: imageURL, clothes: clothes)
+                        self.loadImageFromFirebase(imageUrl: imageURL) {image in
+                            self.clothesList.append(clothes)
+                            clothes.imageFile = image
+                            oncompletion(nil)
+                        }
                     }
                 }
-                
-                oncompletion(nil)
             }
         }
             , withCancel: { error in
@@ -77,19 +78,11 @@ class ClothesManager {
         }
     }
 
-    func loadImageFromFirebase(uid: String, clothes: Clothes){
-        let storageRef = FIRStorage.storage().reference()
-        let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference()
-        databaseRef.child("users").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            // check if user has photo
-            if snapshot.hasChild("userPhoto"){
-                // set image locatin
-                // Assuming a < 10MB file, though you can change that
-                storageRef.child("users").child(FIRAuth.auth()!.currentUser!.uid).child("").data(withMaxSize: 10*1024*1024, completion: { (data, error) in
-                    
-                    clothes.imageFile = UIImage(data: data!)
-                })
-            }
+    func loadImageFromFirebase(imageUrl: String, oncompletion: @escaping (_ image: UIImage)->()){
+        let storageRef = FIRStorage.storage().reference(forURL: imageUrl)
+        storageRef.data(withMaxSize: 10*1024*1024, completion: { (data, error) in
+            let imageRes = UIImage(data: data!)
+                oncompletion(imageRes!)
         })
     }
     
