@@ -8,13 +8,15 @@
 
 import UIKit
 
-class PublishClothesViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class PublishClothesViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var sizeSegmentedControl: UISegmentedControl!
 	@IBOutlet weak var imageView: UIImageView!
 	
+    var descChanged = false
+    
 	var clothesTemp: Clothes = Clothes()
 	
 	var imagePicker = UIImagePickerController()
@@ -26,32 +28,47 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
 		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
 		imageView.isUserInteractionEnabled = true
 		imageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        addDescriptionDesign()
     }
     
     @IBAction func publishButtonAction(_ sender: Any) {
-        if verifyClothesData() != "" {
+        let messageResult: String = verifyClothesData()
+        if messageResult != "" {
 			clothesTemp.id = "0"
             clothesTemp.title = titleTextField.text
 			clothesTemp.description = descriptionTextField.text
 			clothesTemp.size = sizeSegmentedControl.titleForSegment(at: sizeSegmentedControl.selectedSegmentIndex)
 			ClothesManager.instance.saveClothes(clothes: clothesTemp)
+            eraseFields()
+        }
+        else {
+            let alertController = UIAlertController(title: "Message error", message: messageResult, preferredStyle: UIAlertControllerStyle.alert)
+            alertController.present(self, animated: true, completion: nil)
         }
     }
     
     func verifyClothesData() -> String {
         if (titleTextField.text == "") {
-            return "A title for the clothes is needed"
+            return "A title for clothes is needed"
         }
         if (!sizeSegmentedControl.isSelected) {
             return "You need to select the size"
         }
         if (descriptionTextField.text == "") {
-            return "A description for the clothes is needed"
+            return "A description for clothes is needed"
         }
 		if (clothesTemp.imageURL == nil) {
-			return "Image missing. Please select one"
+			return "Image missing. Please select one tapping the image box"
 		}
         return ""
+    }
+    
+    func eraseFields(){
+        titleTextField.text = ""
+        descriptionTextField.text = ""
+        sizeSegmentedControl.selectedSegmentIndex = -1
+        imageView.image = nil
     }
     
     func getSegmentedControlSelection() -> String {
@@ -102,4 +119,17 @@ class PublishClothesViewController: UIViewController, UINavigationControllerDele
             clothesTemp.imageFile = possibleImage
 		}
 	}
+    
+    
+    //UI
+    func addDescriptionDesign(){
+        
+        self.descriptionTextField.layer.borderWidth = 0.5
+        self.descriptionTextField.layer.masksToBounds = true
+        self.descriptionTextField.layer.cornerRadius = 3.0
+        
+        
+        let color = UIColor(red: 25.0/255.0, green: 50.0/255.0, blue: 60.0/255.0, alpha: 0.3)
+        self.descriptionTextField.layer.borderColor = color.cgColor
+    }
 }

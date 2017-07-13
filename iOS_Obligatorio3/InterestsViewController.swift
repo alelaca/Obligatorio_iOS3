@@ -15,6 +15,7 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     @IBOutlet weak var kolodaView: KolodaView!
     
     var clothesManager: ClothesManager = ClothesManager.instance
+    var kolodaDatasource: [Clothes]! = ClothesManager.instance.clothesList
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,11 +48,15 @@ class InterestsViewController: UIViewController, KolodaViewDataSource, KolodaVie
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let clothes: Clothes = clothesManager.clothesList[index]
-        return InterestView.create(imageName: clothes.imageURL, title: clothes.title, size: clothes.size)
+        return InterestView.create(image: clothes.imageFile, title: clothes.title, size: clothes.size)
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
         return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)?[0] as? OverlayView
+    }
+    
+    func kolodaDidRunOutOfCards(_ koloda: Koloda.KolodaView){
+        self.kolodaView.reloadData()
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed{

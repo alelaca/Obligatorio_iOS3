@@ -14,9 +14,9 @@ class InterestView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var sizeLabel: UILabel!
     
-    static func create(imageName: String, title: String, size: String) -> InterestView {
+    static func create(image: UIImage, title: String, size: String) -> InterestView {
         if let view = Bundle.main.loadNibNamed("InterestView", owner: nil, options: nil)?.first as? InterestView {
-            view.imageView.image = UIImage(named: imageName)
+            view.imageView.image = image
             view.titleLabel.text = title
             view.sizeLabel.text = size
             return view

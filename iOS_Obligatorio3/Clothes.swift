@@ -14,7 +14,7 @@ class Clothes {
     var title: String!
     var description: String!
     var size: String!
-    var imageURL: String!
+    var imageURL: String! = ""
     var imageFile: UIImage!
     var tags: [String] = []
     
@@ -42,7 +42,8 @@ class Clothes {
         return [
             "title": self.title,
             "size": self.size,
-            "description": self.description
+            "description": self.description,
+            "imageURL": self.imageURL
         ]
     }
 }

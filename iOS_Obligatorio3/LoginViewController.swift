@@ -18,7 +18,8 @@ class LoginViewController: UIViewController {
         if verifyLoginData() {
             FIRAuth.auth()?.signIn(withEmail: userTextView.text!, password: passTextView.text!) { (user, error) in
                 if let error = error {
-                    // mostrar un mensaje de error
+                    let alertController = UIAlertController(title: "Message error", message: "User or password incorrect", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.present(self, animated: true, completion: nil)
                 }
                 else if let user = user {
 					UserManager.instance.userID = FIRAuth.auth()?.currentUser?.uid

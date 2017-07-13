@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953106191F16D4C400B5FA93 /* centimeter.png in Resources */ = {isa = PBXBuildFile; fileRef = 953106181F16D4C400B5FA93 /* centimeter.png */; };
+		9531061B1F16D6EF00B5FA93 /* SelectedClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9531061A1F16D6EF00B5FA93 /* SelectedClothesViewController.swift */; };
+		9531061D1F17020100B5FA93 /* shirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 9531061C1F17020100B5FA93 /* shirt.png */; };
 		955473651F05D2300060918B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955473641F05D2300060918B /* GoogleService-Info.plist */; };
 		9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959925191EFB3F21006BE283 /* AppDelegate.swift */; };
 		9599251F1EFB3F21006BE283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9599251D1EFB3F21006BE283 /* Main.storyboard */; };
 		959925211EFB3F21006BE283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959925201EFB3F21006BE283 /* Assets.xcassets */; };
 		959925241EFB3F21006BE283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959925221EFB3F21006BE283 /* LaunchScreen.storyboard */; };
 		9599252C1EFB4610006BE283 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9599252B1EFB4610006BE283 /* InterestsViewController.swift */; };
-		959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 959925351EFB522B006BE283 /* img_prueba.jpeg */; };
 		95A003211F0483C50018C7B6 /* ClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003201F0483C50018C7B6 /* ClothesTableViewCell.swift */; };
 		95A003231F0485C20018C7B6 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003221F0485C20018C7B6 /* Clothes.swift */; };
 		95A003251F0487980018C7B6 /* ClothesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003241F0487980018C7B6 /* ClothesTableViewController.swift */; };
 		95A003271F048B930018C7B6 /* ClothesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A003261F048B930018C7B6 /* ClothesManager.swift */; };
-		95BE8F391F0C6E8100D0E059 /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95BE8F361F0C6E8100D0E059 /* img2.jpg */; };
-		95BE8F3A1F0C6E8100D0E059 /* img3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 95BE8F371F0C6E8100D0E059 /* img3.jpeg */; };
-		95BE8F3B1F0C6E8100D0E059 /* img1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 95BE8F381F0C6E8100D0E059 /* img1.jpeg */; };
 		95CCC24A1F032FF500A38D8F /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCC2491F032FF500A38D8F /* ImageManager.swift */; };
 		95CCC24C1F033A9A00A38D8F /* InterestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CCC24B1F033A9A00A38D8F /* InterestView.xib */; };
 		95D35D691EFCA491003152F5 /* InterestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D35D681EFCA491003152F5 /* InterestView.swift */; };
@@ -33,6 +32,9 @@
 /* Begin PBXFileReference section */
 		636BBFC85BB06911F2B4071D /* Pods-iOS_Obligatorio3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Obligatorio3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_Obligatorio3/Pods-iOS_Obligatorio3.debug.xcconfig"; sourceTree = "<group>"; };
 		79BEAD98F8AB6D621527AB03 /* Pods_iOS_Obligatorio3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Obligatorio3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953106181F16D4C400B5FA93 /* centimeter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = centimeter.png; sourceTree = "<group>"; };
+		9531061A1F16D6EF00B5FA93 /* SelectedClothesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedClothesViewController.swift; sourceTree = "<group>"; };
+		9531061C1F17020100B5FA93 /* shirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shirt.png; sourceTree = "<group>"; };
 		955473641F05D2300060918B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		959925161EFB3F21006BE283 /* iOS_Obligatorio3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Obligatorio3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959925191EFB3F21006BE283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,14 +43,10 @@
 		959925231EFB3F21006BE283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959925251EFB3F21006BE283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9599252B1EFB4610006BE283 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
-		959925351EFB522B006BE283 /* img_prueba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img_prueba.jpeg; sourceTree = "<group>"; };
 		95A003201F0483C50018C7B6 /* ClothesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesTableViewCell.swift; sourceTree = "<group>"; };
 		95A003221F0485C20018C7B6 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 		95A003241F0487980018C7B6 /* ClothesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesTableViewController.swift; sourceTree = "<group>"; };
 		95A003261F048B930018C7B6 /* ClothesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesManager.swift; sourceTree = "<group>"; };
-		95BE8F361F0C6E8100D0E059 /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
-		95BE8F371F0C6E8100D0E059 /* img3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpeg; sourceTree = "<group>"; };
-		95BE8F381F0C6E8100D0E059 /* img1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpeg; sourceTree = "<group>"; };
 		95CCC2491F032FF500A38D8F /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		95CCC24B1F033A9A00A38D8F /* InterestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterestView.xib; sourceTree = "<group>"; };
 		95D35D681EFCA491003152F5 /* InterestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestView.swift; sourceTree = "<group>"; };
@@ -141,6 +139,7 @@
 				95A003241F0487980018C7B6 /* ClothesTableViewController.swift */,
 				95FBF1211F0F09B400267E91 /* LoginViewController.swift */,
 				95FBF1231F0F136500267E91 /* PublishClothesViewController.swift */,
+				9531061A1F16D6EF00B5FA93 /* SelectedClothesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -148,10 +147,8 @@
 		959925341EFB51D5006BE283 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				959925351EFB522B006BE283 /* img_prueba.jpeg */,
-				95BE8F361F0C6E8100D0E059 /* img2.jpg */,
-				95BE8F371F0C6E8100D0E059 /* img3.jpeg */,
-				95BE8F381F0C6E8100D0E059 /* img1.jpeg */,
+				953106181F16D4C400B5FA93 /* centimeter.png */,
+				9531061C1F17020100B5FA93 /* shirt.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -236,14 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				95CCC24C1F033A9A00A38D8F /* InterestView.xib in Resources */,
+				953106191F16D4C400B5FA93 /* centimeter.png in Resources */,
 				959925241EFB3F21006BE283 /* LaunchScreen.storyboard in Resources */,
 				959925211EFB3F21006BE283 /* Assets.xcassets in Resources */,
-				959925361EFB522B006BE283 /* img_prueba.jpeg in Resources */,
 				9599251F1EFB3F21006BE283 /* Main.storyboard in Resources */,
-				95BE8F3A1F0C6E8100D0E059 /* img3.jpeg in Resources */,
+				9531061D1F17020100B5FA93 /* shirt.png in Resources */,
 				955473651F05D2300060918B /* GoogleService-Info.plist in Resources */,
-				95BE8F391F0C6E8100D0E059 /* img2.jpg in Resources */,
-				95BE8F3B1F0C6E8100D0E059 /* img1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9531061B1F16D6EF00B5FA93 /* SelectedClothesViewController.swift in Sources */,
 				95FBF1221F0F09B400267E91 /* LoginViewController.swift in Sources */,
 				9599252C1EFB4610006BE283 /* InterestsViewController.swift in Sources */,
 				9599251A1EFB3F21006BE283 /* AppDelegate.swift in Sources */,
