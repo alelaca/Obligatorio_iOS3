@@ -15,6 +15,7 @@ class ClothesTableViewController: UIViewController, UITableViewDelegate, UITable
     
     var clothesManager: ClothesManager = ClothesManager.instance
     var ref: FIRDatabaseReference!
+    var selectedClothes: Clothes?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +54,16 @@ class ClothesTableViewController: UIViewController, UITableViewDelegate, UITable
 			cell.backgroundCardView.layer.shadowOpacity = 0.8
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedClothes = clothesManager.clothesList[indexPath.row]
+        performSegue(withIdentifier: "showClothes", sender: nil)
+    }
 
     // access to clothes detailed information
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        let clothesView = segue.destination as! SelectedClothesViewController
+        clothesView.clothes = selectedClothes
     }
  
 

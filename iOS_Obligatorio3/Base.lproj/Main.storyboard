@@ -218,6 +218,7 @@
                     <tabBarItem key="tabBarItem" title="Search" image="icons8-Búsqueda Filled-50" selectedImage="icons8-Búsqueda Filled-50" id="GSP-1H-Px6"/>
                     <connections>
                         <outlet property="clothesTableView" destination="efn-z9-0Af" id="j7U-Jx-dzr"/>
+                        <segue destination="faO-Ap-7uC" kind="show" identifier="showClothes" id="0Sc-Or-dfI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29Y-cu-MVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -478,11 +479,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-cg-8hY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-cg-8hY">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="sD7-OE-2l1">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="541"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vza-kt-vFD">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
@@ -542,22 +543,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxE-sr-iVg">
-                                                <rect key="frame" x="8" y="411" width="304" height="30"/>
-                                                <nil key="textColor"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gMz-YF-mBw">
+                                                <rect key="frame" x="8" y="411" width="304" height="130"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="yzE-5m-xfF"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="jI2-ra-Vlw" firstAttribute="leading" secondItem="sD7-OE-2l1" secondAttribute="leading" constant="8" id="5e1-r1-oMt"/>
-                                            <constraint firstAttribute="trailing" secondItem="dxE-sr-iVg" secondAttribute="trailing" constant="8" id="Fvz-8q-Mrn"/>
                                             <constraint firstItem="Vza-kt-vFD" firstAttribute="leading" secondItem="sD7-OE-2l1" secondAttribute="leading" id="GQD-fU-jyU"/>
                                             <constraint firstItem="1Iz-tl-c9j" firstAttribute="leading" secondItem="sD7-OE-2l1" secondAttribute="leading" constant="8" id="H3z-52-EB8"/>
+                                            <constraint firstAttribute="trailing" secondItem="gMz-YF-mBw" secondAttribute="trailing" constant="8" id="QRH-aQ-ho0"/>
                                             <constraint firstAttribute="trailing" secondItem="fMb-KQ-tSn" secondAttribute="trailing" constant="8" id="RPe-DS-Nf9"/>
                                             <constraint firstItem="Vza-kt-vFD" firstAttribute="top" secondItem="sD7-OE-2l1" secondAttribute="top" id="THu-HS-bWS"/>
                                             <constraint firstAttribute="trailing" secondItem="eyx-c8-kU8" secondAttribute="trailing" constant="8" id="YwX-LC-74m"/>
-                                            <constraint firstItem="dxE-sr-iVg" firstAttribute="leading" secondItem="sD7-OE-2l1" secondAttribute="leading" constant="8" id="jTr-4R-WHT"/>
+                                            <constraint firstItem="gMz-YF-mBw" firstAttribute="leading" secondItem="sD7-OE-2l1" secondAttribute="leading" constant="8" id="kZI-w0-LnV"/>
                                             <constraint firstAttribute="trailing" secondItem="Vza-kt-vFD" secondAttribute="trailing" id="lIN-3I-HVN"/>
                                             <constraint firstAttribute="trailing" secondItem="1Iz-tl-c9j" secondAttribute="trailing" constant="8" id="nUa-tj-snf"/>
                                             <constraint firstItem="UCG-Hv-ULh" firstAttribute="leading" secondItem="sD7-OE-2l1" secondAttribute="leading" constant="8" id="oo9-e0-8z1"/>
@@ -590,8 +594,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="RZP-s5-kHJ"/>
                     <connections>
-                        <outlet property="descriptionLabel" destination="dxE-sr-iVg" id="zta-rM-XjQ"/>
-                        <outlet property="descriptionTextField" destination="dxE-sr-iVg" id="iIe-ka-4kH"/>
+                        <outlet property="descriptionLabel" destination="gMz-YF-mBw" id="afW-8I-kYM"/>
                         <outlet property="imageView" destination="UCG-Hv-ULh" id="ODV-Li-uKy"/>
                         <outlet property="sizeLabel" destination="NKt-5e-UZi" id="fPn-g1-YTs"/>
                         <outlet property="titleLabel" destination="fMb-KQ-tSn" id="MNT-5U-emk"/>
